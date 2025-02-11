@@ -41,19 +41,12 @@ endinterface  //i2c_interface
 
 class seq_item extends uvm_sequence_item;
     logic      [ 3:0] addr;
-    logic      [ 3:0] addr_i2c_addr;
-    logic      [ 3:0] addr_i2c_wData;
     rand logic [ 7:0] i2c_addr;
     rand logic [ 7:0] i2c_wData;
     logic      [31:0] rData;
     logic             write;
     logic      [ 7:0] got_addr;
     logic      [ 7:0] got_wData;
-
-    constraint addr_C {
-        addr_i2c_addr == 4'h0c;
-        addr_i2c_wData == 4'h08;
-    }
 
     function new(input string name = "seq_item");
         super.new(name);
