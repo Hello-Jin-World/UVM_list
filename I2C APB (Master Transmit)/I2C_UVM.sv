@@ -54,8 +54,6 @@ class seq_item extends uvm_sequence_item;
 
     `uvm_object_utils_begin(seq_item)  // macro
         `uvm_field_int(addr, UVM_DEFAULT)  // There is not ";"
-        `uvm_field_int(addr_i2c_addr, UVM_DEFAULT)  // There is not ";"
-        `uvm_field_int(addr_i2c_wData, UVM_DEFAULT)
         `uvm_field_int(i2c_addr, UVM_DEFAULT)
         `uvm_field_int(i2c_wData, UVM_DEFAULT)
         `uvm_field_int(rData, UVM_DEFAULT)
